@@ -1,4 +1,6 @@
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException{
@@ -17,12 +19,14 @@ public class Main {
                ResultSet rs= stmt.executeQuery("SELECT * FROM employee");
                ResultSetMetaData rsm = rs.getMetaData();
 
-
+                List<Employee> list=new ArrayList<>();
               while(rs.next()) {
-                  System.out.println(rs.getInt(1));
-                  System.out.println(rs.getString(2));
-                  System.out.println(rs.getString(3));
-                  System.out.println(rs.getInt(4));
+                  Employee e=new Employee();
+                  e.setId(rs.getInt(1));
+                  e.setName(rs.getString(2));
+                 e.setEmail(rs.getString(3));
+                 e.setId(rs.getInt(4));
+                 list.add(e);
               }
         } catch (SQLException e) {
             e.printStackTrace();
