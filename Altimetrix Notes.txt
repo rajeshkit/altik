@@ -1,0 +1,592 @@
+  
+
+Java:-
+	
+	block - 
+			{
+			statements;		
+			statements;
+			}
+
+	javac filename.java
+	java filename -> IDE -> Run as-> Java Application
+Control Statement:-
+	By default java executes your statement from top to bottom
+	
+	Types of control statement:-
+	1. conditonal control statement
+		if:-
+			if(condition){
+				statements;
+			}
+			=============================
+			if(condition){
+				statements;
+			}
+			else{
+				statements
+			}
+			=============================
+			if(condition){
+				statements;
+			}
+			else if(condition){
+				statements
+			}
+			else if(condition){
+				statements
+			}else{
+			        statements
+			}		
+			=============================
+			switch(1) {
+			case 1: {
+			System.out.println("statement 3");
+			System.out.println("statement 4");
+			System.out.println("statement 5");
+			}
+			case 2: {
+			System.out.println("statement 6");
+			System.out.println("statement 7");
+			System.out.println("statement 8");
+			}
+			case 3:{
+				statements;
+			}
+			default:{
+			}
+	2. unconditional control statement
+			break
+			continue
+Looping Statement:-
+		for loop:-
+		for(initialization;condition;increment/decrement){
+			statements;
+		}
+		=================================
+		while(condition){
+			statements;
+		}
+		=================================
+		do{
+			statements;
+		}while(condition);
+
+while vs do while:-
+
+variable:-
+	* It is an identity given to the memory location
+	* In java value stored in the memory either read or write can be 	  	  done through java variable 
+	* variable stores data or a value
+
+Methods or functions:-	
+	* Methods tend to do a perticuler task
+	* Method or function inorder to perform logic needs an data
+	* Method in java should not cross more than 15 lines of code
+	  then create an another method and call it
+	* Method never executed automatically programmer need to call 
+	  the method explicitly
+	* Method definition - 
+	* Method call - should invoke the matching method definition
+	Method Syntax:-
+	==============
+	accessmodifier nonaccessmodifier returntype methodname(arglist){
+		statements;
+		statements;
+	}
+	
+	Eg:-
+	void add() { 
+		int a = 10;// data
+		int b = 20;// data
+		int c =  a + b;// logic
+		System.out.println(c); 	//printing the value
+	}
+	ways to write a methods:-
+	=========================
+	1. function with no argument and no return type
+		void circle() {
+			int radius=34;
+			float area=3.14f*radius*radius;
+			System.out.println(area);
+		}
+	2. function with no argument and with return type
+		float circle() {
+			int radius=34;
+			float area=3.14f*radius*radius;
+			return area;
+		}
+	3. function with argument and with out return type
+	4. function with argument and with return type
+
+
+Object Creation Syntax:-
+	Classname objectname=new Classname();
+
+
+Task:-
+	create a class call as Area
+	create a two methods
+	1. main method
+	2. circle() inside the circle method implement circle area
+	3. call the circle method from main method
+
+
+Class:-	
+	• It contains variable or attributes and methods, constructor,
+	  static blocks
+	  It is a blueprint or template for an object	
+	  Objects are made from class
+	  
+	
+	1. Userdefined java class - Java classes created by programmer
+		Eg:- Geometric, Area
+	2. Predefined java Class - The java classes already created 				   and it kept inside the runtime 				   	   system library are called as 				           predefined classes 
+		Eg:- Scanner, String
+
+Object:-
+	Objects are made from class
+	Instance of class called as object
+	Object contains - Properties 
+			  Behaviour
+
+	Customer - id,name,email,phone 
+		   createAccount(), closeAccount(),changePin()
+	Cashier
+	Manager
+	Deposit
+	CreditCard -no, doe, cvv, carttype, pin
+		statement(), bill(), emi()
+	DebitCard
+	Cheque
+	Account
+	
+
+Method Overloadding:-
+	* Method with same name different arguments are called as 	  	  method overloading.
+	  Payment -> Task is makePayment -UPI, OnlineBabnking,
+					    Cash, cards
+		
+Variable:-
+	Instance variable - A variable is declared inside the class 	   		    outside of any method is called as instance 			    variable
+	Static variable - A variable is declared inside the class 	   		    outside of any method with static keyword is called as 		    static variable
+	Local variable - A variable declared inside the method or inside
+			 the block are called as local variable
+
+Method Area - static members - static varibale, static method, static 			       block
+Heap - Instance members - instance variable, instance method
+Stack - Reference variable and local variable
+
+
+Constructor:-
+	Is a sepcial member function in a class
+	Constructor never returns a value
+	Constructor name should be same as your class name
+	Constructor can be overloadded
+Association:-
+	Communication between classes
+	To access the members of one class to the another class
+	
+	Phone    ----->    SmartPhone
+
+	IS-A Association - extends 
+		1. single inhritance
+			Phone
+			  
+			SmartPhone		
+
+	HAS-A Association
+
+variables:-
+	Primitive - byte,short,int,long,float,double,char,boolean
+	Non primitive or reference or object reference - String, Array 
+	
+	int a=45;
+	
+
+Primitive type		Wrapper class		Reference Type
+byte			Byte			Byte.valueOf(bytevalue)
+short			Short			Short.valueOf(shortvalue)
+int			Integer
+long			Long
+float			Float
+double			Double
+char			Character
+boolean			Boolean
+	
+	boxing - converting primitive type to non primitive type
+		Byte.valueOf(bytevalue)
+	unboxing - converting non primitive type to primitive
+		referenceByte.byteValue();
+varargs:-
+	varargs - variable length arguments
+
+	Employee interface
+		
+		appraisal();
+	class PermanentEmployee inherit Employee interface
+	class TemporaryEmployee inherit Employee interface
+	class SupportEmployee inherit Employee interface
+			
+	
+	EmployeeManagement class
+		need to create an object for all the child classes
+		which implements Employee interface
+
+	Object clone(Object i){
+
+	}
+			Number -> Byte,Short,Integer,Long
+
+
+
+	Object casting:-
+		Assigning object of one type to another type
+		1.Implicit Object casting Or Upcasting or Widening
+		
+			ParentClass ref=new ChildClass()
+		
+		2.Explicit Object Casting Or Downcasting or Narrowing
+
+			ChildClass ref=New ParentClass();
+		
+		Muttable - changable    
+			String locationName = "Ascenda Tech Park chennai"
+			locationName+" chennai";		
+			
+		Immutable - not changable
+			String locationName = "Ascenda Tech Park"
+			locationName+" chennai";
+
+			"Ascenda Tech Park chennai"
+		
+		String Literal - Immutable String
+		
+		StringBuffer  - Muttable String
+		
+		StringBuilder - Muttable String	
+
+
+Cart.java
+	public class Cart{
+		public static void main(String args[]){
+			productName;
+			description;
+			price;
+			noOfProducts;
+			totalPrice;
+			display all the details
+		}
+	}
+
+
+	Create at least two product in the cart
+Types of Exception:-
+	1. Checked Exception
+		The exception classes which extends Exception class are
+		callled as checked exception
+		Eg: ClassNotFoundException, ClassCastException
+	2. Unchecked Exception
+		The exception classes which extends RuntimException class 			are called as Unchecked exception or Runtime Exception
+		Eg: ArithmeticExceptin, NullPointerException
+Java Enum:-
+=========
+In Java, an enum (short for enumeration) is a type that has a fixed set of constant values.
+
+ It denotes a special type of class that always extends the java.lang.Enum class. 
+
+These values inside the braces are called enum constants (values).
+
+An enum class can include methods and fields just like regular classes.
+
+enum Size {
+    constant1, constant2, …, constantN;
+
+    // methods and fields	
+}
+
+
+Multitasking:-
+	Process - Multiprocessing
+	Thread - Multithreading
+
+	A thread is a thread of execution in a program. 
+	The Java Virtual Machine allows an application to have multiple 	threads of execution running concurrently. 
+	Every thread has a priority. 
+	Threads with higher priority are executed in preference to threads 	with lower priority.
+	Java Thread creation types:-
+	1. Extending an Thread
+	2. Implementing a Runnable
+
+	public class Laptop extends Thread
+		Laptop l=new Laptop();
+		l.start() --> internally it is going to the run()
+			      run() - write a task to be executed 
+			      by the thread l
+
+
+Array:-	
+	group of similar type, size is fixed
+	Array can both hold primitive and non primitive of similar type
+
+Collection:-
+	can hold group of object non primtive 
+	similar non similar type, dynamic in size
+	
+	collection has its own hierachy
+	collection hieraichy has  - interfaces, abstract class,
+				    concrete class etc
+
+	Each collection classare backed by one datastructure algrithm
+	1. Array
+	2. LinkedList
+	3. Tree
+	4. Hashing
+	5. Sort
+
+	ArrayList - Array DS, Not a thread safe
+	LinkedList - LinkedList DS
+	Vector - Array DS, Thread safe
+
+	HashSet - Hashing DS(HashTable)
+	LinkedHashSet - LinkedList + Hashing
+	TreeSet - Tree DS - sorting
+
+
+	Order or Unorder
+	duplicate or no duplicate
+	accepts null or will not accept a null
+		
+	List
+		maintains the objects in order
+		It accepts an duplicate	objects
+		It accepts an null objects
+
+	Set
+		maintains the objects in unorder		
+		It will not accept an duplicate object
+		It will accepts only one null object
+
+
+Data:-	
+	useful information
+Database
+	Collection useful information
+Relational Database
+	Collection of useful information that has relationship among them
+Database Management System
+	It is a software that manages one or more databases
+Relational Database Management System
+	It is a software that manages one or more databases that has a
+	relationship
+SQL Commands Types:-
+	DDL(Data Definition Language)
+		CREATE - create database
+			CREATE DATABASE databasename;
+		USE - select a database
+			USE databasename;
+		DROP - delete a database
+			DROP DATABASE databasename;
+		SHOW - list all the databases
+			SHOW DATABASES;
+
+		CREATE - create a new table
+			CREATE TABLE tablename(columname1 datatype,
+			columname2 datatype,
+			columname3 datatype,
+			columnamen datatype);
+			CREATE TABLE employee(id number,name varchar,
+			dob date,phone varchar(10));
+
+		DROP  - delete a table from the database
+			DROP TABLE tablename;
+			DROP TABLE employee;
+			
+	DML(Data Manuplation Language)
+		
+		INSERT - Add a row
+			INSERT INTO tablename VALUES(value1,value2,..);
+			INSERT INTO employee VALUES			(354,'qwe','qwe@gmail.com',5675);	
+		SELECT  - view the row
+			SELECT * FROM tablename;
+			SELECT * FROM Employee;
+		DELETE - delete a row
+			DELETE FROM employee WHERE condition;
+
+			DELETE FROM employee WHERE email='qwe@gmail.com';
+		UPDATE:- 
+			UPDATE TABLENAME SET 			columnname=newvalue,columnname=newvalue WHERE 					condition;
+
+			UPDATE employee SET salary=10000 WHERE id=234;
+
+			UPDATE employee SET salary=10000,name='rrr',email='rrr@gmail.com' WHERE id=234;
+
+	TCL(Transaction Control Language)
+	DCL(Data Control Language)
+
+
+	JDBC API:-
+		
+		DriverManager(C) - getConnection(url,username,password)
+		Connection(I)
+		Statement(I) or -execute(),executeUpdate(), executeQuery()
+		PreparedStatement(I) or - execute(),executeUpdate(), 					executeQuery()
+		CallableStatement(I) -execute(),executeUpdate(), 				executeQuery()
+
+	booelan execute(query);-DDL query
+	int executeUpdate(query); - write operation(INSERT,UPDATE,DELETE)
+	ResultSet executeQuery(query); - read operation(SELECT)
+	insert - write operation
+	update - write operation
+	delete - write operation
+	select - read operation	
+	Steps:-
+		Prerequitse:- Download mysql connector.jar jdbc driver for 			      mysql
+			      Add the mysql connector.jar into the project
+		
+		Step 1: Load the Driver class
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		Step 2: Create a Connection 
+			DriverManager.getConnection(url,username,password)	
+			
+		
+	Statement 				Prepared Statement
+
+static SQL Query				Dynamic SQL query
+INSERT INTO employee 				INSERT INTO employee 
+VALUES(7000,'rahul',				VALUES(?,?,?,?);
+'rahul@gmail.com',3477)	
+
+if the query wanted once			If the wanted to execute
+						mutiple times
+performance is low				performance is high
+						(queries are precompiled)
+
+PL/SQL:-Procedural Language / Structured Query Language
+	declare a variable	
+	create/call a method / pass an arg to the method / return a value
+	if condition 
+	switch case
+	for
+	array
+		void main(){
+			int a;
+			
+		}
+
+
+PL/SQL:- 	
+		create or replace function main(name varchar)
+		begin
+			a int;
+		end;
+		
+	Procedure - returns zero or more value
+	Function - returns exactly must return value
+USE `altimetrik`;
+DROP procedure IF EXISTS `getEmployeeSalaryById`;
+
+USE `altimetrik`;
+DROP procedure IF EXISTS `altimetrik`.`getEmployeeSalaryById`;
+;
+
+DELIMITER $$
+USE `altimetrik`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getEmployeeSalaryById`(IN eid int, OUT esalary int,OUT ename varchar)
+BEGIN
+	select salary into esalary from employee where id=eid;
+	select name into ename from employee where id=eid;
+END;$$
+
+DELIMITER ;
+;
+
+
+Enum:-
+	 Java Enum serve the purpose of representing a group of named 	 	 constants in a programming language.
+	
+	 In Java, an enum (short for enumeration) is a type that has a 	 fixed set of constant values. We use the enum keyword to declare 		 enums. 
+
+	 Enums are used when we know all possible values at compile time, 		
+	 static and final variable
+		
+	 A Java enumeration is a class type. 
+		
+	 The enum constants are usually represented in uppercase.
+	 enum enumName{
+		CONSTANT1,
+		CONSTANT2,
+		CONSTANT3,
+	 }
+	
+Lambda Expression:-
+	Functional Interface:-
+		A interface has only one abstract method
+
+		@FunctionalInterface on top of the finctional interface
+
+		A functional should have exactly one abstract method
+		But it can have zero or more implemented method
+
+		Runnable Interface - run() Functional Interface	 
+		Comparable Interface - compareTo - Functional Interface
+		Comparator Interface - compare
+
+Lambda Rule:-
+	Lambda expression doesnot take annotations
+	Lambda expression doesnot take access and non access modifier
+	Lambda expression doesnot take method return type
+	Lambda expression doesnot take method name
+	Lambda expression after the argument bracket ->(operator)
+	Lambda expression arg type is optional remove the type 
+	if lambda body only one statement u can remove the {  } braces
+	from the lambda body
+	if lambda body only one statement that too return statement u can 		remove the {  } braces and also return keyword	from the lambda 		body
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
