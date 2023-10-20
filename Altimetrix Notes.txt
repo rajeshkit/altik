@@ -532,6 +532,21 @@ Lambda Expression:-
 		Comparable Interface - compareTo - Functional Interface
 		Comparator Interface - compare
 
+Java 8 Features:-
+	Funtional Interface	
+	default method
+	static method
+	Lamda expression - Functional programming - concise and clear
+	Method Reference
+	Stream API - simple stream and parellel stream
+	New DateTime API - java.time
+		LocalDate
+		LocalTime
+		LocalDateTime
+		
+		String ---> LocalDate,LocalTime - DateTimeFormatter
+	
+
 Lambda Rule:-
 	Lambda expression doesnot take annotations
 	Lambda expression doesnot take access and non access modifier
@@ -542,7 +557,348 @@ Lambda Rule:-
 	if lambda body only one statement u can remove the {  } braces
 	from the lambda body
 	if lambda body only one statement that too return statement u can 		remove the {  } braces and also return keyword	from the lambda 		body
+
+Generics in java:-
+	Java generics are mainly used to impose type safety in programs
+	It avoid type conversion
 	
+	Java Generic - Syntax and Naming Convention	
+		E – Element (used extensively by the Java Collections 		    			Framework,for example, ArrayList, Set, etc.)
+		K – Key (Used in Map)
+		N – Number
+		T – Parameter Type
+		V – Value (Used in Map)
+	Types of Generics in Java
+		Java Generic Type Class
+		Java Generics Interface
+			//Generic interface definition
+    			interface DemoInterface<T1,T2>{
+    				T1 doSomeOperation(T1 t);
+    				T2 doReverseOperation(T2 t);
+   			}
+			//Class implementing generic interface
+
+		Generic Method
+Adv:-
+	Code Reusability 
+	Type Safety
+	Individual Type Casting is not Needed
+	
+	Generics in Java is a way of enforcing type safety through 	compile-time checks.
+	You can use generics in classes, methods, and interfaces.
+	Generics do not work with primitive data types. Hence wrapper 	class for the data type must be used. Ex- Integer, Float, Double, 	etc.
+	Wildcard enhances the utility of generics by giving more control 	in handling unknown data types.
+
+Java Reflection:-
+	Java Reflection provides ability to inspect and modify the runtime 	behavior of application.
+
+SOLID Design Principles:-
+	SOLID is a structured design approach that ensures your software 	is modular and easy to maintain, understand, debug, and refactor.
+	S - Single Responsibility Principle
+		Each class should be responsible for a single part or 				functionality of the system.
+		Every class in Java should have a single job to do. To be 		precise, there should only be one reason to change a 		class. 
+		public class Vehicle {
+    			
+    			public void addVehicleToDB() {}
+		}
+		public class VechileValuation(){
+			
+    			public double calculateValue() {}
+		}
+		public class VechileDetails{
+			public void printDetails() {}
+		}
+		
+		public class Employee{
+			public void addEmployee();
+			public void deleteEmployee();
+			public void updateEmployee();
+			public void getSudexo();
+		}
+		
+		public class Caclulator{
+			public void add(int a,int b,int c){
+				int total=a+b;
+				return multily(total,c);
+			}
+			public int multiply(int total,int c){
+				return total*c;
+			}
+		}
+
+	O - Open Closed Principle:-
+		Software entities (e.g., classes, modules, functions) 		should be open for an extension, but closed for 		modification.
+		Open for extension, meaning that the class’s behavior can 		be extended; and
+		Closed for modification, meaning that the source code is 		set and cannot be changed.
+
+		public class VehicleCalculations {
+    			public double calculateValue(Vehicle v) {
+        		if (v instanceof Car) {
+            			return v.getValue() * 0.8;
+        		if (v instanceof Bike) {
+            			return v.getValue() * 0.5;
+    			}
+			if (v instanceof Electric) {
+            			return v.getValue() * 0.2;
+
+    			}
+		}
+		 
+		public class Vehicle {
+    			public double calculateValue() {...}
+		}
+		public class Car extends Vehicle {
+    			public double calculateValue() {
+        			return this.getValue() * 0.8;
+		}
+		public class Truck extends Vehicle{
+    			public double calculateValue() {
+        			return this.getValue() * 0.9;
+		}
+		public class Electric extends Vechile{
+			public double calculateValue() {
+        			return this.getValue() * 0.2;
+		}	  
+	}
+	L - Liskov Substitution Principles
+		The Liskov Substitution Principle (LSP) applies to 		inheritance hierarchies such that derived classes must 				be completely substitutable for their base classes.
+		
+		 It states that objects of a superclass should be 		 replaceable with objects of its subclasses without 		 breaking the system’s integrity. 
+			
+		In simpler terms, any instance of a base class should be 		able to be replaced by any of its derived classes without 		affecting the correctness of the program
+
+			
+		List alist=new ArrayList();
+
+	
+	public interface TwoWeeler{
+		 public void drive();
+    		 public void stop();
+    		 public void refuel();
+	}
+	public interface FourWeeler{
+		 public void drive();
+    		 public void stop();
+    		 public void refuel();
+		 public void openDoors();
+	}
+		
+
+	public interface Player{
+		public void audio();
+		public void video();
+	}
+	public class VlcPlayer implements Player{
+		public void audio();
+		public void video();
+	}
+	public class WinAmp implements Player{
+		publivc void audio(){
+		}
+		public void video(){
+		
+		}
+	}
+
+	D - Dependency inversion principle
+		The Dependency Inversion Principle (DIP) states that we 		should depend on abstractions (interfaces and abstract 				classes) instead of concrete implementations (classes).
+	
+	 	The abstractions should not depend on details; instead, 			the details should depend on abstractions.
+		
+Spring Framework:-
+
+	The Spring framework(which is commonly known as Spring) has 	emerged as a solution to all these complications This framework 	uses various new techniques such as Aspect-Oriented Programming 	(AOP), Plain Old Java Object (POJO), and dependency injection 	(DI), to develop enterprise applications, thereby removing the 	complexities involved while developing enterprise applications 	using EJB, 
+	
+	Spring is an open source lightweight framework that allows Java EE 	7 developers to build simple, reliable, and scalable enterprise 	applications.
+	 
+	This framework mainly focuses on providing various ways to help 		you manage your business objects. 
+	
+	It made the development of Web applications much easier as 			compared to classic Java frameworks and Application Programming 		Interfaces (APIs), such as Java database connectivity(JDBC), 			JavaServer Pages(JSP), and Java Servlet.
+SOA:-
+====
+	
+WebService:-
+===========
+		* Client / Server Architecture
+		SOAP
+		Rest API
+
+	Client
+	
+	Rest API
+		Server - Tomcate Server
+		spring jar
+		rest jar
+		database configuration
+		bean configuration file
+		component-scan
+		java object - json format conversion - jar file
+
+	Spring framework + Rest api
+
+Rest API:- 
+	create a resource -POST	http://altimatrik.com:80/product
+	get all resources -GET	http://altimatrik.com:80/products
+	get resource	  -GET	http://altimatrik.com:80/product/{id}
+	update resource	  -PUT 	http://altimatrik.com:80/product/{id}
+	delete a resource -DELETE http://altimatrik.com:80/product/{id}
+
+Spring Boot:-
+		spring boot + rest api
+
+Spring Data Jpa:
+1. spring-boot-starter-data-jpa 
+2. mysql-connector/j
+3. application.properties -> db url,username,password
+
+			  -> db configuration
+
+
+@SpringBootConfiguration -> programmer java configuration class with  @EnableAutoConfiguration-> spring boot loads @configuration annotated 			   classes
+@ComponentScan - scan the component class (userdefined and predefined)
+
+Bean Validation:-
+	
+	dependency  - spring-boot-starter-validation	
+		
+@NotNull: to say that a field must not be null.
+@NotEmpty: to say that a list field must not empty.
+@NotBlank: to say that a string field must not be the empty string (i.e. 	   it must have at least one character).
+@Min and @Max: to say that a numerical field is only valid when it’s value            is above or below a certain value.
+@Pattern: to say that a string field is only valid when it matches a            certain regular expression.
+@Email: to say that a string field must be a valid email address.
+@Size(min, max): Validates if a string or collection size is within a 		 specific range.
+@Digits(integer, fraction): Validates that a numeric field has a specified 		 number of integer and fraction digits.
+@Past and @Future : Checks that a date or time field is in the past and 		    future respectively.
+@AssertTrue and @AssertFalse: Ensures that a boolean field is true. and 				false respectively.
+@CreditCardNumber: Validates that a field contains a valid credit card 			number.
+@Valid: 	Triggers validation of binding objects or properties.
+@Validated: 
+		Specifies validation groups to be applied at the class or 		method level.	
+
+
+Java Unit Testing
+	QA Team - Testing
+		Unit Test 
+			src/main/java
+				AggregateCaluclator.java
+				{
+100  10					public float cacluateGpa
+					(int score){
+						return score/100*10; 
+					}
+				}
+			src/main/test			
+				Testing framework - junit 5
+			class AggregateCaluclatorTest
+				@Test
+				public void testaCluateGpa(){
+					assert(10.0,cacluateGpa(100));
+				}
+
+Rule for test case:-
+	- Test class name should be same as your class name 
+	  it should ends with Test Keyword
+	- @Test
+	- Test case method does not return value(void)
+	- Test case method name should start with test keyword
+	- Test case method any arg	
+
+		Integration Test
+
+	style - html element 
+		
+		style - stylename:stylevalue;
+
+		selector{
+			color:"red";
+			background-color:"black";
+		}	
+		Types of selector css:-
+			1. element or tag selector
+				p{
+					color:"red";
+					background-color:"black";
+				}
+				div{
+					color:"red";
+					background-color:"black";
+				}	
+			2. id selector
+
+				#para3{
+					color:"red";
+					background-color:"black";			
+				}
+				#para2{
+					color:"red";
+					background-color:"black";			
+				}
+			3. class selector
+				.parastyle{
+					color:"red";
+					background-color:"black";	
+				}
+				.content{
+					font-size:2em;	
+				}
+Three ways of writing css:-
+	1. Inline style - scope of the style rule only within the element
+	2. Internal style -  scope of the style rule with in the entire 			     html document element
+	3. External style - scope of the style rule with in the entire 			     html document element and all other document
+Html Element or Tag:-
+
+		Inline level element - span,strong
+		block level element - div,p
+
+	static variablename=value;
+	primitive type
+	Reference type
+Javascript:-
+	a=10;
+	primitive type - number,string,boolean,undefined,null
+		
+	Reference type - Array,Object
+		
+	array - []
+
+	Arrays:-
+		 var a=[34,56,true,34,"vijay",35.4,null,undefined];
+        
+        	for (let index = 0; index < a.length; index++) {
+            		const element = a[index];
+            		console.log(element);
+            	}
+        	for (const i of a) { //for of - used to iterate the array
+            		console.log(i);
+        	}
+        	a.forEach(e=>console.log(e));
+React JS:-
+============
+	* The library for web and native user interfaces	
+	* React lets you build user interfaces out of individual pieces 	  	  called components. 
+	* Create your own React components like Thumbnail, LikeButton, and 	  Video. Then combine them into entire screens, pages, and apps.
+	* 
+	
+React Component:-
+	React component has properties, state management, life cycle and 		event handler
+
+	React app starts with a single root component.
+
+	Root component is build using one or more component.
+
+	Each component can be nested with other component to any level.
+			
+	React app can include third party component for specific purpose 	such as routing, animation, state management, etc.
+
+to create React Application
+	 -> npm create vite@latest
+
+Component two types:-
+	1. Functional Component - 
+			state and props
+
+	2. Class Component - state props
 	
 
 
@@ -554,6 +910,19 @@ Lambda Rule:-
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 
