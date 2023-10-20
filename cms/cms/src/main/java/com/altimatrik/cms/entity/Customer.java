@@ -10,6 +10,7 @@ import lombok.*;
 import java.sql.Date;
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Customer {
     @Id

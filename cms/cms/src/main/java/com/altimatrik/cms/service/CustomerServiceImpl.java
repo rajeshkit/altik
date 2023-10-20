@@ -25,8 +25,12 @@ public class CustomerServiceImpl implements ICustomerService{
 
     @Override
     public Customer getCustomerById(int customerId) {
-
-        return customerRepository.findById(customerId).get();
+       Optional<Customer> opt =customerRepository.findById(customerId);
+       Customer c=null;
+       if(opt.isPresent()){
+            c=opt.get();
+        }
+        return c;
     }
 
     @Override
@@ -41,7 +45,6 @@ public class CustomerServiceImpl implements ICustomerService{
     @Override
     public Optional<Customer> deleteCustmomer(int customerId) {
         customerRepository.deleteById(customerId);
-
         return  customerRepository.findById(customerId);
     }
 }

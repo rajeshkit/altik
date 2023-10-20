@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="styles.css" rel="stylesheet">
+        <script>
+            function display(){
+               let x = document.querySelector("p");
+               console.log(x);
+               x.innerText="Rajesh";
+               x.style.color="blue";
+            }
+            var message=()=>{
+                var w = document.querySelector("div");
+                w.innerHTML=`<h3>Demo is working</h3>`;
+            }
+            let contentchanged=($event)=>{
+                console.log(event.target.value);
+                var d = document.querySelector("#uname")
+                d.innerText=event.target.value;
+            }
+        </script>
+    </head>
+    <body>  
+        <h1 id="pro" class="proclass" onclick="display()"><strong>Product</h1>
+        <br>
+            Welcome:<span id="uname"></span><hr>
+            <input onkeyup="contentchanged()" type="text" id="name"><br><br>
+        <br>
+        <p>Lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Id possimus ratione ut iste reprehenderit minus, nemo doloremque, reiciendis dolor molestias assumenda fugit animi impedit praesentium? Praesentium ab consequuntur beatae atque.</p>
+        <p>Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Id possimus ratione ut iste reprehenderit minus, nemo doloremque, reiciendis dolor molestias assumenda fugit animi impedit praesentium? Praesentium ab consequuntur beatae atque.</p>
+        <p>Lorem3 ipsum dolor sit amet consectetur adipisicing elit. Eum eaque, velit nesciunt officia, et aliquam laudantium, adipisci impedit quibusdam dolor iste omnis natus veritatis corporis beatae ipsum laboriosam rerum harum.
+        Recusandae, a at, nisi non, ab perspiciatis ipsa dolorem libero minima pariatur consectetur debitis accusantium praesentium aliquam harum voluptatibus quam! Magnam et, minus magni ut fugiat consequuntur veniam sapiente tempore.
+        <div>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et repellat maxime veritatis ipsum fugiat, distinctio numquam voluptatibus dolorem nihil incidunt culpa? Ipsam consequuntur praesentium dolor nostrum quo doloremque excepturi illum!
+        </div>
+      
+        <button onclick="message()">click</button>
+    </body>
+</html>

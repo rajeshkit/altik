@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("customer-api")
+@CrossOrigin
 public class CustomerController {
     @Autowired
     private ICustomerService customerService;
